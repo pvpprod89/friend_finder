@@ -9,8 +9,11 @@ module.exports = function(app) {
   });
 
   // Get userInput and find the closest friend by matching/comparing scores and difference
-  app.post("/friends", function(req, res) {
+  app.post("/api/friends", function(req, res) {
     var userInputScores = req.body.scores;
+
+    console.log("Current user scores: " + userInputScores);
+
     var userInputScoresArray = [];
     var friendMatch = 0;
 
